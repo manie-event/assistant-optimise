@@ -1,3 +1,4 @@
+import pp from '@/assets/pp.jpg';
 import { v4 as uuidv4 } from 'uuid';
 import { ref } from 'vue';
 import type { UserModel } from '../models/UserModel';
@@ -6,7 +7,7 @@ import type { UserModel } from '../models/UserModel';
 export const useUserService = () => {
    const userInfo = ref<UserModel>({
     id: uuidv4(),
-    photo: '',
+    photo: pp,
     nomComplet: 'Léonore Dujeancourt',
     adresse: '193 rue de Gerland',
     codePostal: '69007',
