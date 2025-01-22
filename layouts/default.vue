@@ -1,10 +1,11 @@
 <template>
   <div class="default">
     <header>
-      <span class="default__logo">Manie</span>
       <nav>
         <ul>
-          <li><NuxtLink to="/">Accueil</NuxtLink></li>
+          <li>
+            <NuxtLink to="/"><span class="default__logo">Manie</span></NuxtLink>
+          </li>
           <li><NuxtLink to="/a-propos">Qui sommes nous ?</NuxtLink></li>
           <li><NuxtLink to="/contact">Contact</NuxtLink></li>
         </ul>
@@ -42,6 +43,8 @@
         display: flex;
         list-style: none;
         gap: 2rem;
+        align-items: center;
+        padding: 0;
         li {
           font-family: "Poppins";
           font-size: 0.8rem;

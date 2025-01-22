@@ -1,4 +1,3 @@
-import type { PrestataireModel } from "./PrestataireModel";
 
 export interface ProjectModel {
   nom: string,
@@ -8,8 +7,9 @@ export interface ProjectModel {
   service: boolean,
   typeActivites: string[],
   typeEvenement: string,
-  nombreInvite: string,
+  nombreInvite: nombre,
   genres: string[],
+  createdAt: Date,
   prestationRestauration: string[], //pas de question 4 s’ils ont coché le lieu « bar/restau »
   prestationBoisson: string[], //Idem pour ceux qui ont indiqué « bar » ou « restau »
   prestationAnimations: string[],

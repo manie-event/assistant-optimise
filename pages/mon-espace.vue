@@ -45,6 +45,7 @@ onMounted(() => useUser().setUserInfo());
 </script>
 <style lang="scss" scoped>
 .mon-espace {
+  margin: 0 2rem;
   &__tabs {
     width: fit-content;
     padding: 0.5rem;
@@ -53,7 +54,7 @@ onMounted(() => useUser().setUserInfo());
     display: flex;
     gap: 0.3rem;
     border-radius: 5rem;
-    margin: 0 auto;
+    margin: 0 auto 3rem;
     button {
       border: none;
       padding: 0.5rem 1rem;

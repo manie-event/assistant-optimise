@@ -6,4 +6,7 @@ export default defineNuxtConfig({
     strict: true
   },
     modules: ['@pinia/nuxt'],
+    plugins: [
+    '~/plugins/dayjs.js'
+  ]
 })
