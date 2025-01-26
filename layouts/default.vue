@@ -25,50 +25,47 @@
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css2?family=Ms+Madi&family=Poppins:wght@400;600;900&display=swap");
 .default {
-  padding: 0.3rem 2rem;
   &__logo {
-    font-family: "Poppins";
-    font-weight: 900;
+    font-family: $font-family-primary;
+    font-weight: $font-weight-bold;
     font-size: 2rem;
-    color: rgb(202, 101, 101);
+    color: $color-quaternary;
   }
   header {
     display: flex;
 
     nav {
-      display: flex;
-      justify-content: space-between;
+      @include flex(space-between, row);
       width: 100%;
       ul {
-        display: flex;
+        @include flex(space-between, row);
         list-style: none;
         gap: 2rem;
-        align-items: center;
-        padding: 0;
+        padding: $padding-none;
         li {
-          font-family: "Poppins";
-          font-size: 0.8rem;
-          font-weight: 400;
-          color: black;
+          font-family: $font-family-primary;
+          font-size: $font-size-small;
+          font-weight: $font-weight-regular;
+          color: $black;
           a {
-            color: black;
+            color: $black;
             text-decoration: none;
-            font-weight: 400;
+            font-weight: $font-weight-regular;
           }
           .router-link-exact-active {
             color: inherit;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: $font-weight-medium;
           }
         }
       }
       ul:nth-of-type(2) li:last-child a {
-        background-color: black;
-        padding: 0.5rem;
+        background-color: $black;
+        padding: $padding-small;
         border-radius: 5px;
-        color: white;
+        color: $white;
         a {
-          color: white;
+          color: $white;
         }
       }
     }

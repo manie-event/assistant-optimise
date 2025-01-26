@@ -14,11 +14,11 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { onMounted, computed } from "vue";
-import VueDEnsemblePersonalInfo from "@/components/vue-d-ensemble/personal-info.vue";
 import VueDEnsembleDashboard from "@/components/vue-d-ensemble/dashboard.vue";
 import VueDEnsembleEvenements from "@/components/vue-d-ensemble/evenements.vue";
+import VueDEnsemblePersonalInfo from "@/components/vue-d-ensemble/personal-info.vue";
 import VueDEnsemblePrestataires from "@/components/vue-d-ensemble/prestataires.vue";
+import { computed, onMounted } from "vue";
 const activeTab = ref(0);
 
 const currentTab = computed(() => tabs[activeTab.value].component);
@@ -48,25 +48,25 @@ onMounted(() => useUser().setUserInfo());
   margin: 0 2rem;
   &__tabs {
     width: fit-content;
-    padding: 0.5rem;
-    background: white;
-    color: black;
+    padding: $padding-small;
+    background: $white;
+    color: $black;
     display: flex;
     gap: 0.3rem;
-    border-radius: 5rem;
-    margin: 0 auto 3rem;
+    border-radius: $border-radius-large;
+    margin: $margin-none auto 3rem;
     button {
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5rem;
-      background: white;
+      border: 0;
+      padding: $padding-small $padding-medium;
+      border-radius: $border-radius-large;
+      background: $white;
       cursor: pointer;
     }
     .active {
-      background: black;
-      color: white;
+      background: $black;
+      color: $white;
       height: 100%;
-      padding: 0.5rem 1rem;
+      padding: $padding-small $padding-medium;
     }
   }
 }

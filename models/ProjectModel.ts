@@ -7,7 +7,7 @@ export interface ProjectModel {
   service: boolean,
   typeActivites: string[],
   typeEvenement: string,
-  nombreInvite: nombre,
+  nombreInvite: number,
   genres: string[],
   createdAt: Date,
   prestationRestauration: string[], //pas de question 4 s’ils ont coché le lieu « bar/restau »

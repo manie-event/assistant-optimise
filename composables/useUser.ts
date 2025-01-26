@@ -6,7 +6,7 @@ export const useUser = () => {
 
 
   const setUserInfo = async () => {
-    const {userInfo} = await useUserService()
+    const {userInfo} =  useUserService()
     userStore.setUserInfo({...userInfo.value})
   }
 

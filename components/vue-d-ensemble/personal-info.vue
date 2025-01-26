@@ -15,15 +15,14 @@
 </template>
 
 <script setup lang="ts">
-import { useUserStore } from "@/stores/User";
-import { useUser } from "@/composables/UseUser";
-import { storeToRefs } from "pinia";
-import { onMounted, computed } from "vue";
 import noPp from "@/assets/noPp.png";
+import { useUserStore } from "@/stores/User";
+import { storeToRefs } from "pinia";
+import { computed } from "vue";
 
 const { user } = storeToRefs(useUserStore());
 const fullAdress = computed(() => {
-  return `${user.value.adresse} ${user.value.codePostal} ${user.value.ville}, ${user.value.pays}`;
+  return `${user?.value.adresse} ${user.value.codePostal} ${user.value.ville}, ${user.value.pays}`;
 });
 </script>
 
@@ -31,12 +30,12 @@ const fullAdress = computed(() => {
 .personal-info {
   &__profil-picture {
     display: flex;
-    border-radius: 0.5rem;
+    border-radius: $border-radius-small;
     img {
       object-fit: cover;
       width: 7rem;
       height: 7rem;
-      border-radius: 0.5rem;
+      border-radius: $border-radius-small;
     }
   }
 }

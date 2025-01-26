@@ -14,8 +14,7 @@
       <template #content>{{ nombreInvite }}</template>
     </base-card>
        <base-card class="dashboard__a-definir">
-      <template #header> Personnes invités: </template>
-      <template #description> Depuis 1 an</template>
+      <template #header> Memo: </template>
       <template #content>{{ nombreInvite }}</template>
     </base-card >
     <base-card class="dashboard__evenement-resume">
@@ -28,8 +27,8 @@
 </template>
 <script setup lang="ts">
 import BaseCard from "@/commun/base-card.vue";
-import { storeToRefs } from "pinia";
 import { useUserStore } from "@/stores/User";
+import { storeToRefs } from "pinia";
 const { user } = storeToRefs(useUserStore());
 
 const nombreInvite = computed(() => {
@@ -57,8 +56,5 @@ grid-row-gap: 8px;
 &__a-definir { grid-area: 1 / 4 / 4 / 6; }
 &__evenement-resume { grid-area: 2 / 1 / 4 / 4; }
 
-&__titre{
-
-}
 }
 </style>

@@ -5,8 +5,20 @@ export default defineNuxtConfig({
   typescript: {
     strict: true
   },
-    modules: ['@pinia/nuxt'],
+  modules: ['@pinia/nuxt'],
     plugins: [
     '~/plugins/dayjs.js'
-  ]
+  ],
+   css: [
+    '@/styles/main.scss'
+  ],
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@import "@/styles/_global.scss";`
+        }
+      }
+    },
+  }
 })
